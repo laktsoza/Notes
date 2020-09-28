@@ -110,8 +110,8 @@ img:hover {
 }
 
 #save {
-  position: fixed;
-  margin: 22% 0% 0% 34.7%;
+  margin-top: 48.5%;
+  margin-left: 78%;
   display: none;
   background-color: lightblue;
   border-color: lightblue;

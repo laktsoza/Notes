@@ -25,11 +25,11 @@ function time () {
     let date = t.toLocaleString();
     document.getElementById("time").innerText = date;
 }; time();
-let y = 17;
+
 const add = document.getElementById('plus');
 const remove = document.getElementById('recycle');
 
-let x = 5;
+let x = 1;
 
 function addDiv () {
     if (x > 0) {
@@ -65,10 +65,15 @@ let textarea = document.getElementById("story");
 button.addEventListener("click", function () {
     let h2 = document.createElement("p");
     h2.textContent = textarea.value;
-    document.getElementById('right').appendChild(h2);
+    let rightDiv = document.getElementById('right');
     h2.setAttribute('id', 'savedtext');
+    rightDiv.appendChild(h2);
     console.log(textarea.value);
+    let savedText = document.getElementById("savedtext");
+    savedText.textContent = textarea.value;
 })
+
+
 
 add.addEventListener('click', addDiv);
 add.addEventListener('click', showTextarea);
