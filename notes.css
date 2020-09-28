@@ -15,6 +15,7 @@
     float: left;
 }
 
+
 #right {
     height: 100%;
     width: 68%;
@@ -101,6 +102,7 @@ img:hover {
     margin-top: 1%;
 }
 
+    
 #story {
     display: none;
     margin-top: 0.9%;
@@ -113,11 +115,13 @@ img:hover {
   margin-top: 48.5%;
   margin-left: 78%;
   display: none;
-  background-color: lightblue;
+  background-color: rgb(79, 194, 233);
   border-color: lightblue;
   border-radius: 10%;
 }
-
+#save:hover {
+  opacity: 0.7;
+}
 #savedtext {
   display: none;
 }

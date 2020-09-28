@@ -29,6 +29,7 @@ function time () {
 const add = document.getElementById('plus');
 const remove = document.getElementById('recycle');
 
+
 let x = 1;
 
 function addDiv () {
@@ -59,29 +60,35 @@ function showTextarea() {
     
 }
 
-let button = document.getElementById("save");
-let textarea = document.getElementById("story");
+const button = document.getElementById("save");
+const textarea = document.getElementById("story");
+const header = document.querySelectorAll("#header");
 
-button.addEventListener("click", function () {
-    let h2 = document.createElement("p");
-    h2.textContent = textarea.value;
-    let rightDiv = document.getElementById('right');
-    h2.setAttribute('id', 'savedtext');
-    rightDiv.appendChild(h2);
-    console.log(textarea.value);
-    let savedText = document.getElementById("savedtext");
-    savedText.textContent = textarea.value;
-})
-
-
+let savedtext = document.createElement("p");
+let rightDiv = document.getElementById('right');
 
 add.addEventListener('click', addDiv);
 add.addEventListener('click', showTextarea);
 
+button.addEventListener("click", function () {
+    
+    savedtext.setAttribute('id', 'savedtext');
+    rightDiv.appendChild(savedtext);
+    savedtext.textContent = textarea.value;   
+})
 
 
 
+// header.addEventListener("click", function() {
+//     let textexist = document.getElementById("savedtext");
+//     textarea.value = textexist.textContent;
+// });
 
+remove.addEventListener ('click', function (){
+    button.style.display = "none";
+    textarea.style.display = "none";
+    header.style.display = "none";
+})
 
 
 
