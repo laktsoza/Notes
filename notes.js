@@ -25,7 +25,7 @@ function time () {
     let date = t.toLocaleString();
     document.getElementById("time").innerText = date;
 }; time();
-let y = 15;
+let y = 17;
 const add = document.getElementById('plus');
 const remove = document.getElementById('recycle');
 
