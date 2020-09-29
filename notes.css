@@ -6,6 +6,8 @@
     border-radius: 7px;
     margin: auto;
     margin-top: 100px;
+    font-family: verdana, sans-serif;
+    font-size: 12px;
 }
 
 #left {
@@ -23,70 +25,71 @@
 }
 
 .dots {
-    padding-top: 4%;
+  padding-top: 4%;
+  padding-left: 7%;
+  }
+
+#red {
+  height: 13px;
+  width: 13px;
+  background-color:lightcoral;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#yellow {
+  height: 13px;
+  width: 13px;
+  background-color:rgb(245, 245, 127);
+  border-radius: 50%;
+  display: inline-block;
+}
+#green {
+  height: 13px;
+  width: 13px;
+  background-color: lightgreen;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#input {
+    border-color: lightgray;
+    padding-top: 3%;
     padding-left: 7%;
   }
 
-  #red {
-    height: 13px;
-    width: 13px;
-    background-color:lightcoral;
-    border-radius: 50%;
-    display: inline-block;
+#header, #header1 {
+    display: none;
+    margin-top: 3%;
+    width: 99%;
+    height: 14%;
+    background-color: #c8e8fa;
   }
 
-  #yellow {
-    height: 13px;
-    width: 13px;
-    background-color:rgb(245, 245, 127);
-    border-radius: 50%;
-    display: inline-block;
-  }
-  #green {
-    height: 13px;
-    width: 13px;
-    background-color: lightgreen;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
-  #input {
-      border-color: lightgray;
-      padding-top: 3%;
-      padding-left: 7%;
-  }
-
-  #header {
-      margin-top: 3%;
-      width: 99%;
-      height: 14%;
-      background-color: #c8e8fa;
-  }
-
-  #header:hover {
+#header:hover {
     background-color: rgb(117, 200, 228);
   }
 
 
-  p {
-      margin: auto;
-      padding-top: 2%;
-      padding-left: 7%;
-      font-family: verdana, sans-serif;
-      font-size: 12px;
+p {
+    margin: auto;
+    padding-top: 2%;
+    padding-left: 7%;
+    font-family: verdana, sans-serif;
+    font-size: 12px;
   }
   
-  #time {
-      width: 100%;
-      margin-top: 6%;
-      margin-left: 20%;
+#time {
+    width: 100%;
+    margin-top: 6%;
+    margin-left: 23%;
   
   }
 #recycle {
     height: 25px;
     width: 25px;
     float: right;
-    margin-right: 12%;
+    margin-right: 7%;
     margin-top: -4.3%;
 }
 img:hover {
@@ -94,26 +97,29 @@ img:hover {
   }
 
 #plus {
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    float: left;
-    margin-left: 4%; 
-    margin-top: 1%;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 4%; 
+  margin-top: 1%;
 }
 
     
 #story {
-    display: none;
-    margin-top: 0.9%;
-    margin-left: 4%;
-    float: left;
-    border-color: lightgray;
+  /* background: url(memories.png) center no-repeat;
+  background-size: contain; */
+  resize: none;
+  display: none;
+  margin-top: 0.5%;
+  margin-left: 4%;
+  float: left;
+  border-color: lightgray;
 }
 
 #save {
-  margin-top: 48.5%;
-  margin-left: 78%;
+  margin-top: 51.2%;
+  margin-left: 83.3%;
   display: none;
   background-color: rgb(79, 194, 233);
   border-color: lightblue;

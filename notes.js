@@ -20,77 +20,98 @@
 // }
 
 // add.addEventListener('click', createNote);
+
+//header. .textContent = date;
+//header.appendChild(par1);
+
+//let par = document.createElement("p");
+//par.textContent = 'Note';
+//header.appendChild(par);
+
+//let par1 = document.createElement("p");
+
+//let x = 1; 
+//const header = document.getElementById("header");
+
+
+const add = document.getElementById('plus');
+const remove = document.getElementById('recycle');
+const header = document.getElementById("header");
+const button = document.getElementById("save");
+const textarea = document.getElementById("story");
+
+let dated = document.getElementById('dated');
+let title = document.getElementById('note');
+let savedtext = document.createElement("p");
+let rightDiv = document.getElementById('right');
+
 function time () {
     let t = new Date();
     let date = t.toLocaleString();
     document.getElementById("time").innerText = date;
 }; time();
 
-const add = document.getElementById('plus');
-const remove = document.getElementById('recycle');
-
-
-let x = 1;
-
 function addDiv () {
-    if (x > 0) {
-    let leftDiv = document.getElementById('left');
-
-    let newDiv = document.createElement("div");
-    newDiv.setAttribute('id', 'header');
-    leftDiv.appendChild(newDiv);
-
-    let par = document.createElement("p");
-    par.textContent = 'Note';
-    newDiv.appendChild(par);
-
-    let par1 = document.createElement("p");
+    header.style.display = "block";
     let t = new Date();
     let date = t.toLocaleTimeString();
-    par1.textContent = date;
-    newDiv.appendChild(par1);
-    }
-    x--;
-}
+    if (dated.textContent == "") {
+        dated.textContent = date;
+    }  
+};
+
+// function addDiv1 () {
+//     if(header.style.display == "block") {
+//         header1.style.display = "block";
+//         let t = new Date();
+//         let date = t.toLocaleTimeString();
+//         if (dated.textContent == "") {
+//             dated.textContent = date;
+//         }  
+//     }
+// } 
 
 function showTextarea() {
     let story = document.getElementById("story");
     story.style.display = "block";
     document.getElementById("save").style.display = "block";
     
-}
+};
 
-const button = document.getElementById("save");
-const textarea = document.getElementById("story");
-const header = document.querySelectorAll("#header");
-
-let savedtext = document.createElement("p");
-let rightDiv = document.getElementById('right');
-
-add.addEventListener('click', addDiv);
-add.addEventListener('click', showTextarea);
-
-button.addEventListener("click", function () {
-    
+function save () {  
     savedtext.setAttribute('id', 'savedtext');
     rightDiv.appendChild(savedtext);
-    savedtext.textContent = textarea.value;   
-})
+    savedtext.textContent = textarea.value; 
+    function firstWord () {
+        let x = savedtext.textContent;
+        let res = x.split( " ", 1);
+        title.textContent = res;
+    } firstWord();  
+};
 
+function backText() {
+    let textexist = document.getElementById("savedtext");
+    if(textexist !== null) {
+    textarea.value = textexist.textContent;
+    }
+};
 
-
-// header.addEventListener("click", function() {
-//     let textexist = document.getElementById("savedtext");
-//     textarea.value = textexist.textContent;
-// });
-
-remove.addEventListener ('click', function (){
+remove.addEventListener ('click', () => {
     button.style.display = "none";
     textarea.style.display = "none";
     header.style.display = "none";
+    textarea.value = '';
+    title.textContent = '';
+    savedtext.textContent = '';
 })
 
 
+
+//add.addEventListener('click', addDiv1);
+add.addEventListener('click', addDiv);
+add.addEventListener('click', showTextarea);
+button.addEventListener("click", save);
+header.addEventListener("click", backText);
 
 
 
