@@ -105,8 +105,6 @@ remove.addEventListener ('click', () => {
     savedtext.textContent = '';
 })
 
-
-
 //add.addEventListener('click', addDiv1);
 add.addEventListener('click', addDiv);
 add.addEventListener('click', showTextarea);
